@@ -1,0 +1,114 @@
+/* Estilo padrão */
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.dropdown-menu {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFFFFF;
+    text-decoration: underline;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+}
+
+.sections {
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+li {
+    cursor: pointer;
+}
+
+.departs {
+    margin-right: -5%;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .sections {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .list {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .dropdown-button {
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        min-width: 150px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .sections {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .dropdown-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dropdown-menu {
+        width: 20px;
+        
+
+    }
+    
+
+    .departs {
+        margin-right: 0;
+    }
+}

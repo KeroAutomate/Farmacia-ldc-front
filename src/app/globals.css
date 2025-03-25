@@ -5,22 +5,47 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F4F4F4;
+    --titles: #565656;
   }
 }
 
+
 body {
+  color: var(--titles);
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
+/* Estilização da barra de rolagem */
+body::-webkit-scrollbar {
+  width: 13px; /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(38,171,221); /* Cor do "polegar" da barra de rolagem */
+  border-radius: 6px; /* Arredondamento do "polegar" */
+  border: 3px solid transparent; /* Espaçamento ao redor do "polegar" */
+  background-clip: content-box; /* Ajuste do fundo do "polegar" */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* Cor do fundo da barra de rolagem */
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
