@@ -11,8 +11,10 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4",
-    "node": "20.19.0"
+    "next": "15.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "devDependencies": {
     "typescript": "^5",
