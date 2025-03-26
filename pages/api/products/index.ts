@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const { data, totalPages } = await get_all_products_paginated(Number(index), Number(limit), search as string);
 
         // Garantir que os dados não contenham BigInt ao serem serializados
-        const sanitizedData = data.map((item) =>
+        const sanitizedData = data.map((item:any) =>
           JSON.parse(
             JSON.stringify(item, (_, value) => (typeof value === 'bigint' ? value.toString() : value))
           )
