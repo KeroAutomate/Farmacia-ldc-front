@@ -1,0 +1,7 @@
+name = "meu-nextjs-docker"
+compatibility_date = "2024-03-26"
+workers_dev = true
+
+[[containers]]
+image = "ghcr.io/seu-usuario/nextjs-app:latest"
+port = 3000  # Porta do Next.js
